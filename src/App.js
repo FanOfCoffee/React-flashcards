@@ -1,25 +1,53 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import Header from './components/Header';
+import Footer from './components/Footer';
 import './App.css';
+import FlashcardList from './components/FlashcardList';
 
 function App() {
+  
+  const [flashcards, setFlashcards] = useState(SAMPLE_FLASHCARDS)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <>
+    <header>
+      <Header/>
+    </header>
+    <div className='container'>
+      <FlashcardList flashcards={flashcards} />
     </div>
+    <div>
+      <Footer/>
+    </div>
+
+    </>
   );
 }
+
+const SAMPLE_FLASHCARDS = [
+  {
+    id: 1,
+    word: 'Hello',
+    pronunciation: '[annyeonghaseyo]',
+    k_word: '안녕하세요'
+  },
+  {
+    id: 2,
+    word: 'Please',
+    pronunciation: '[juseyo]',
+    k_word: '주세요'
+  },
+  {
+    id: 3,
+    word: 'Sorry',
+    pronunciation: '[joesonghamnida]',
+    k_word: '죄송합니다'
+  },
+  {
+    id: 4,
+    word: 'Thank You',
+    pronunciation: '[gamsahamnida]',
+    k_word: '감사합니다'
+  }
+]
 
 export default App;
