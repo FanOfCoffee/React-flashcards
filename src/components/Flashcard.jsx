@@ -1,12 +1,15 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useRef } from 'react'
+//import { useEffect } from 'react'
 import '../styles/Flashcard.css'
 
 export default function Flashcard({flashcard}) {
     const [flip, setFlip] = useState(false)
-    const[height, setHeight] = useState('initial')
+    
     const frontEl = useRef()
     const backEl = useRef()
 
+    /*Если будет не одно слово, а фраза или предложение
+    const[height, setHeight] = useState('initial')
     function setMaxHeight() {
         const frontHeight = frontEl.current.getBoundingClientRect().height
         const backHeight = backEl.current.getBoundingClientRect().height
@@ -17,11 +20,11 @@ export default function Flashcard({flashcard}) {
         window.addEventListener('resize', setMaxHeight)
         return () => window.removeEventListener('resize',setMaxHeight)
     }, [])
-
+*/
     return (
         <div 
         className={`card ${flip ? 'flip' : ''}`}
-        style={{height : height }}
+        //style={{height : height }}
         onClick={() => setFlip(!flip)}>
             <div className='front' ref={frontEl}>
                 {flashcard.word}
