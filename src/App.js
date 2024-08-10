@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import './App.css';
+import './styles/FlashcardApp.css';
+import './App.css'
 import FlashcardList from './components/FlashcardList';
 
 function App() {

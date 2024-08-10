@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react'
+import '../styles/Flashcard.css'
 
 export default function Flashcard({flashcard}) {
     const [flip, setFlip] = useState(false)
@@ -11,26 +12,26 @@ export default function Flashcard({flashcard}) {
         const backHeight = backEl.current.getBoundingClientRect().height
         setHeight(Math.max(frontHeight,backHeight, 100))
     }
-    useEffect(setMaxHeight, [flashcard.word, flashcard.k_word, flashcard.pronunciation])  
+    useEffect(setMaxHeight, flashcard)  
     useEffect(() => {
         window.addEventListener('resize', setMaxHeight)
         return () => window.removeEventListener('resize',setMaxHeight)
     }, [])
 
-  return (
-    <div 
-    className={`card ${flip ? 'flip' : ''}`}
-    style={{height : height }}
-    onClick={() => setFlip(!flip)}>
-        <div className='front' ref={frontEl}>
-            {flashcard.word}
-        </div>
-        <div className='back' ref={backEl}>
-            <div className='f-pronunciation'>
-                {flashcard.pronunciation}
+    return (
+        <div 
+        className={`card ${flip ? 'flip' : ''}`}
+        style={{height : height }}
+        onClick={() => setFlip(!flip)}>
+            <div className='front' ref={frontEl}>
+                {flashcard.word}
             </div>
-            {flashcard.k_word}
+            <div className='back' ref={backEl}>
+                <div className='f-pronunciation'>
+                    {flashcard.pronunciation}
+                </div>
+                {flashcard.k_word}
+            </div>
         </div>
-    </div>
-  )
+    )
 }
