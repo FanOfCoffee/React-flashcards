@@ -3,8 +3,8 @@ import '../styles/Header.css'
 
 export default function Header() {
   return (
-    <div>
+    <header>
         <h1>Learn smth with me</h1>
-    </div>
+    </header>
   )
 }

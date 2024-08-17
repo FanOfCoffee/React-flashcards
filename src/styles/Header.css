@@ -2,7 +2,8 @@ header {
     background-color: var(--neutral-dark-grayish-blue);
     display: flex;
     justify-content: center;
-    align-content: center;
+    align-items: center;
+    height: 10vh;
 }
   
 h1 {

@@ -8,4 +8,7 @@
   --neutral-violet: hsl(281, 73%, 45%);
   --neutral-dark-grayish-blue: hsl(233, 14%, 22%);
   --neutral-white: hsl(0, 0%, 100%);
+  --primary-linear-gradient: hsl(248, 97%, 46%), hsl(281, 73%, 45%);
 }
+
+

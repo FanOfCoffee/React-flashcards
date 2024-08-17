@@ -1,0 +1,28 @@
+.table-btn {
+    margin-top: 1rem;
+    border: none;
+    background-image: linear-gradient(to right, var(--primary-linear-gradient));
+    color: var(--neutral-white);
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    box-shadow: 0px 3px 3px lightgrey;
+    cursor: pointer;
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+.table-btn button, .add-btn button {
+    width: 100%;
+}
+
+.add-btn {
+    margin-top: 1rem;
+    border: none;
+    background-image: linear-gradient(to right, var(--primary-linear-gradient));
+    color: var(--neutral-white);
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    box-shadow: 0px 3px 3px lightgrey;
+    cursor: pointer;
+
+}

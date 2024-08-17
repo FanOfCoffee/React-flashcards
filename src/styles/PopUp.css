@@ -1,0 +1,61 @@
+.p-c {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-container {
+    position: fixed;
+    z-index: 1;
+    left:0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.popup {
+    border-radius: 5px;
+    padding: 2rem;
+    background-color: aliceblue;
+    width: 25em;
+}
+
+.popup .form-popup-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1rem;
+    flex-direction: row;
+}
+
+.form-popup {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5rem;
+}
+.form-popup input {
+    border:  1px solid var(--neutral-dark-grayish-blue);
+    border-radius: 0.3rem;
+    padding: 0.3rem;
+    font-size: 1rem;
+}
+
+.form-popup label {
+    margin-bottom: 0.3rem;
+}
+
+.error{
+    background-color: rgb(235, 103, 103);
+    color: darkred;
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+    margin-bottom: 1rem;
+
+
+}
+
