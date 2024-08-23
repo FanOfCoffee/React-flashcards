@@ -26,3 +26,23 @@
     cursor: pointer;
 
 }
+
+.next-page-btn {
+    border: none;
+    background-image: linear-gradient(to right, var(--primary-linear-gradient));
+    color: var(--neutral-white);
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    box-shadow: 0px 3px 3px lightgrey;
+    cursor: pointer;
+}
+
+.page-btn {
+    border: none;
+    background-image: linear-gradient(to right, var(--primary-linear-gradient));
+    color: var(--neutral-white);
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    box-shadow: 0px 3px 3px lightgrey;
+    cursor: pointer;
+}

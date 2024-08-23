@@ -7,6 +7,8 @@ import './styles/Buttons.css'
 import FlashcardList from './components/FlashcardList';
 import Table from './components/Table';
 import PopUp from './components/PopUp';
+import FCL from './components/FCL';
+
 
 
 function App() {
@@ -48,6 +50,10 @@ function App() {
     }))
   }
 
+  const handleClosePopUp = () => {
+    setPopUpOpen(false);
+    setRowToChange(null);
+  }
 
   return (
     <>
@@ -61,13 +67,12 @@ function App() {
       <div className='p-c'>
         <button className='add-btn' onClick={() => setPopUpOpen(true)}>Создать слово</button>
       </div>
-        {popUpOpen && <PopUp closePopUp={() => {
-          setPopUpOpen(false);
-          setRowToChange(null);
-        }} 
+        {popUpOpen && <PopUp closePopUp={handleClosePopUp} 
         onSubmit = {handleAdd}
         defaultValue = {rowToChange !== null && rows[rowToChange]}
         />}
+        <FCL flashcards={flashcards}/>
+
       <div>
         <Footer/>
       </div>

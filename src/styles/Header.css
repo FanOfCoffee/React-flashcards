@@ -1,13 +1,18 @@
 header {
     background-color: var(--neutral-dark-grayish-blue);
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     height: 10vh;
 }
-  
+
 h1 {
     background-image: url(../assets/eliska-motisova-0xT-am7qnPg-unsplash.jpg);
     background-clip: text;
-    color: transparent;
-  }
+    color: transparent; 
+    margin: 1rem;
+}
+
+.next-page-btn {
+    margin: 1rem;
+}

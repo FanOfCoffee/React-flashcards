@@ -18,24 +18,25 @@ export default function PopUp({closePopUp, onSubmit, defaultValue}) {
         })
     }
 
+    
+
 
     const [errors, setErrors] = useState("")
     
     const validateForm = () => {
-        if (formState.word && formState.pronunciation && formState.k_word && formState.category) {
-            setErrors("")
-            return true
-        } else {
-            let errorField = [];
-            for(const [key, value] of Object.entries(formState)) {
-                if(!value){
-                    errorField.push(key);
-                }
+        let errorField = [];
+        for(const [key, value] of Object.entries(formState)) {
+            if(!value){
+                errorField.push(key);
             }
-            setErrors(errorField.join(", "));
-            return false
         }
+
+        const hasErrors = !!errorField.length
+
+        setErrors(hasErrors ? errorField.join(", ") : "");
+        return !hasErrors
     };
+
 
 
     const handleChange = (e) => {
@@ -89,4 +90,3 @@ export default function PopUp({closePopUp, onSubmit, defaultValue}) {
         
     )
     }
-
