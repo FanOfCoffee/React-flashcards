@@ -1,49 +1,11 @@
 import React, {useState} from 'react'
 import Flashcard from './Flashcard'
-import '../styles/FCL.css'
-import { BsArrowLeftCircleFill,  BsArrowRightCircleFill} from 'react-icons/bs';
+import '../styles/FlashCardSlider.css'
 
-export default function FCL({flashcards}) {
-    /*const [slide, setSlide] = useState(0);
 
-    const handleNext = () => {
-        if(slide >= flashcards.length -1) return;
-        setSlide(slide+1);
-
-        //setSlide(slide === flashcards.length - 1 ? 0 :slide + 1);
-    }
-    const handlePrev = () => {
-        if(slide === 0) return;
-        setSlide(slide-1);
-        //setSlide(slide === 0 ? flashcards.length-1 :slide - 1);
-    }*/
-    const [current, setCurrent] = useState(0);
-    function previousCard() {
-        setCurrent(current - 1);
-    }
-    function nextCard() {
-        setCurrent(current + 1);
-    }
-
-  return (
-    <div className='slider'> 
-        <BsArrowLeftCircleFill onClick={previousCard} className='arrow arrow-left'/>
-        {flashcards.map((flashcard, index) => {
-            return <Flashcard 
-            flashcard = {flashcard} 
-            key={index}
-            className={current === index ? 'card' : 'card-hidden'}
-            />
-        })}
-        <BsArrowRightCircleFill onClick={nextCard} className='arrow arrow-right'/>
-    </div>
-  )
-} 
-
-/*
-export default function FCL({flashcards})  {
+export default function FlashCardSlider({flashcards})  {
     const cards = flashcards.map((flashcard) => {
-        return <Flashcard flashcard={flashcard} key={flashcard.id} />;
+        return <Flashcard className='cardslide' flashcard={flashcard} key={flashcard.id} />;
     });
 
     const loading = <div className="loading">Loading flashcard content...</div>;
@@ -85,4 +47,4 @@ export default function FCL({flashcards})  {
             </div>
         </div>
     );
-}*/
+}

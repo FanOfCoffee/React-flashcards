@@ -3,7 +3,7 @@
     display: grid;
     align-items: center;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 1rem;
+    gap: 5rem;
   }
   
   .card {
@@ -19,7 +19,9 @@
     transition: 150ms;
     cursor: pointer;
     transform: perspective(1000px) rotateY(var(--rotate-y, 0)) translateY(var(--translate-y,0));
-    height: 100px;
+    height: 15vh;
+    width: 300px;
+    margin: 5px;
   }
   .card-hidden{
     display: none;
