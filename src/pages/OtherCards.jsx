@@ -1,5 +1,5 @@
 import React, { useState} from 'react'
-import '../styles/Buttons.css'
+import '../assets/styles/Buttons.css'
 
 import FCL from '../components/FCL';
 import FlashCardSlider from '../components/FlashCardSlider';

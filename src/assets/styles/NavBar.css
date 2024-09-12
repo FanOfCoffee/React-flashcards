@@ -68,5 +68,10 @@ span {
 
 .menu-logo {
     margin-right: 2rem;
-    margin-top: 1rem;
+
+}
+
+.logo {
+    height: 70px;
+    filter: invert(70%);
 }

@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import Flashcard from './Flashcard'
-import '../styles/FlashCardSlider.css'
+import '../assets/styles/FlashCardSlider.css'
 
 
 export default function FlashCardSlider({flashcards})  {
@@ -22,7 +22,7 @@ export default function FlashCardSlider({flashcards})  {
         <div className='slider'>
             {flashcards && flashcards.length > 0 ? (
             <div className="cardNumber">
-                Flashcard {current + 1} of {flashcards.length}
+                Карточка {current + 1} из {flashcards.length}
             </div>
             ) : (
             ""

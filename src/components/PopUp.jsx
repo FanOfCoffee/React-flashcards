@@ -1,5 +1,5 @@
 import React, { useState} from 'react'
-import '../styles/PopUp.css'
+import '../assets/styles/PopUp.css'
 
 export default function PopUp({closePopUp, onSubmit, defaultValue}) {
     const [formState, setFormState] = useState(defaultValue || {

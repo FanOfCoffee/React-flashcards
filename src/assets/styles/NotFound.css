@@ -1,0 +1,14 @@
+.not-found {
+    display: grid;
+    place-items: center;
+    background-color: aliceblue;
+    height: 90vh;
+}
+.pic {
+    margin-top: -5rem;
+    height: 70vh;
+    margin-bottom: -10rem;
+}
+.to-main {
+    height: 5vh;
+}

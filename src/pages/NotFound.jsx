@@ -1,13 +1,17 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import pic from '../assets/img/404error.png';
+import '../assets/styles/Buttons.css';
+import '../assets/styles/NotFound.css'
 
 function NotFound() {
     return (
         <>
-        <div>
-            <img src="../assets/3814348.jpg" alt="Страница не найдена" />
+        <div className='not-found'>
+            <img className='pic' src={pic} alt="Страница не найдена" />
             <Link to="/"> 
-                <p>Вернуться на главную страницу</p>
+            <button className='page-btn to-main'>Вернуться на главную страницу</button>
+
             </Link>
         </div>
         </>

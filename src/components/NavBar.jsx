@@ -1,11 +1,11 @@
 import React, {useState } from 'react';
-import '../styles/NavBar.css';
+import '../assets/styles/NavBar.css';
 import * as FaIcons from "react-icons/fa";
 import * as AiIcons from "react-icons/ai";
-import * as IoIcons from "react-icons/io";
 import {Link} from "react-router-dom";
 import { NavBarData } from './NavBarData';
-import {IconContext} from 'react-icons'
+import {IconContext} from 'react-icons';
+import logo from '../assets/img/superhero-in-training.png'
 
 function NavBar() {
     const [sidebar, setSidebar] = useState(false);
@@ -20,7 +20,7 @@ function NavBar() {
                     <FaIcons.FaBars onClick={showSidebar}/>
                 </Link>
                 <Link to="/" className="menu-logo menu-bars"> 
-                    <IoIcons.IoLogoOctocat />
+                    <img className='logo' src={logo} alt="logo" />
                 </Link>
             </div>
             

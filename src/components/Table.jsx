@@ -1,5 +1,5 @@
 import React from 'react'
-import '../styles/Table.css'
+import '../assets/styles/Table.css'
 import {BsFillTrashFill, BsFillPencilFill} from 'react-icons/bs'
 
 export default function Table({rows, deleteRow, changeRow}) {

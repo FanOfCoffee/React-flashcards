@@ -1,15 +1,15 @@
 import React, {useState} from 'react'
-import '../styles/FlashcardApp.css';
-import '../styles/Buttons.css'
+import '../assets/styles/FlashcardApp.css';
+import '../assets/styles/Buttons.css'
 import FlashcardList from '../components/FlashcardList';
 
 function Cards() {
     const [flashcards, setFlashcards] = useState(SAMPLE_FLASHCARDS)
-  return (
-    <div className='container'>
-    <FlashcardList flashcards={flashcards} />
-    </div>
-  )
+    return (
+      <div className='container'>
+      <FlashcardList flashcards={flashcards} />
+      </div>
+    )
 }
 
 export default Cards

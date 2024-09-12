@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Table from '../components/Table';
 import PopUp from '../components/PopUp';
-import '../styles/Buttons.css'
+import '../assets/styles/Buttons.css'
 
 
 function Home() {

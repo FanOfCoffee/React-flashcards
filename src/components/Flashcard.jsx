@@ -1,12 +1,13 @@
 import React, { useState, useRef } from 'react'
 //import { useEffect } from 'react'
-import '../styles/Flashcard.css'
+import '../assets/styles/Flashcard.css'
 
 export default function Flashcard({flashcard}) {
     const [flip, setFlip] = useState(false)
     
     const frontEl = useRef()
     const backEl = useRef()
+
 
     /*Если будет не одно слово, а фраза или предложение
     const[height, setHeight] = useState('initial')
@@ -28,6 +29,7 @@ export default function Flashcard({flashcard}) {
         onClick={() => setFlip(!flip)}>
             <div className='front' ref={frontEl}>
                 {flashcard.word}
+                <button onClick={() => setFlip(!flip)} className='page-btn'>Перевод</button>
             </div>
             <div className='back' ref={backEl}>
                 <div className='f-pronunciation'>

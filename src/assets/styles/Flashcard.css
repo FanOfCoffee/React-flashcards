@@ -48,7 +48,11 @@
   }
   
   .card .front {
-    top: 20%;
+    margin-top: 0.5rem;
+    display: grid;
+    place-items: center;
+    gap: 1rem;
+
   }
   
   .f-pronunciation {

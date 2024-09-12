@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import Flashcard from './Flashcard'
-import '../styles/FCL.css'
+import '../assets/styles/FCL.css'
 import { BsArrowLeftCircleFill,  BsArrowRightCircleFill} from 'react-icons/bs';
 
 export default function FCL({flashcards}) {
