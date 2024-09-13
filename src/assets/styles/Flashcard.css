@@ -22,6 +22,7 @@
     height: 15vh;
     width: 300px;
     margin: 5px;
+    border: 1px solid purple;
   }
   .card-hidden{
     display: none;
@@ -32,6 +33,7 @@
   }
   .card.flip {
     --rotate-y:180deg;
+    border: none;
   }
 
   .card .front,

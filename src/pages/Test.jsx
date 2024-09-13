@@ -1,18 +1,20 @@
-import React, { useState } from 'react';
+import React, { useState , useEffect } from 'react';
 import Table from '../components/Table';
 import PopUp from '../components/PopUp';
 import '../assets/styles/Buttons.css';
 import words from '../words.json'
 
 
-function Home() {
+function Test() {
     const [popUpOpen, setPopUpOpen] = useState(false)
-    const [rows, setRows] = useState(words);
-
-    
+    const [rows, setRows] = useState([]);
+    useEffect(() =>{
+        setRows(words);
+    })
     const [rowToChange, setRowToChange] = useState(null)
-    const handleDeleteRow = (targetIndex) => {
-        setRows(rows.filter((_, index) => index !== targetIndex))
+    const handleDeleteRow = (id) => {
+        const newRow = rows.filter((row) => row.id !==id);
+        setRows(newRow);
     }
     
     const handleChangeRow = (index) => {
@@ -51,4 +53,4 @@ function Home() {
     )
 }
 
-export default Home
+export default Test

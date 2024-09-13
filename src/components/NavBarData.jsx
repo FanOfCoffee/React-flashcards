@@ -21,4 +21,10 @@ export const NavBarData = [
         icon: <IoIcons.IoMdCard/>,
         className: 'nav-text'
     },
+    {
+        title: 'Тест',
+        path: '/test',
+        icon: <IoIcons.IoMdCard/>,
+        className: 'nav-text'
+    },
 ]

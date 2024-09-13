@@ -9,6 +9,7 @@ import Home from './pages/Home';
 import Cards from './pages/Cards';
 import OtherCards from './pages/OtherCards';
 import NotFound from './pages/NotFound';
+import Test from './pages/Test';
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
         <Route path='/game' element = {<Cards/>}/>
         <Route path='/cards' element = {<OtherCards/>}/>
         <Route path='*' element = {<NotFound/>}/>
+        <Route path='/test' element = {<Test/>} />
       </Routes>
 
         

@@ -1,8 +1,8 @@
-import React, { useState, useRef } from 'react'
-//import { useEffect } from 'react'
-import '../assets/styles/Flashcard.css'
+import React, { useState, useRef } from 'react';
+//import { useEffect } from 'react';
+import '../assets/styles/Flashcard.css';
 
-export default function Flashcard({flashcard}) {
+export default function Flashcard({flashcard}, props) {
     const [flip, setFlip] = useState(false)
     
     const frontEl = useRef()
@@ -29,7 +29,7 @@ export default function Flashcard({flashcard}) {
         onClick={() => setFlip(!flip)}>
             <div className='front' ref={frontEl}>
                 {flashcard.word}
-                <button onClick={() => setFlip(!flip)} className='page-btn'>Перевод</button>
+                <button onClick={props.tryClick} className='page-btn'>Перевод</button>
             </div>
             <div className='back' ref={backEl}>
                 <div className='f-pronunciation'>
