@@ -1,12 +1,15 @@
-import React, { useState, useRef } from 'react';
-//import { useEffect } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import '../assets/styles/Flashcard.css';
 
-export default function Flashcard({flashcard}, props) {
+export default function Flashcard({flashcard, handleClick}, props) {
     const [flip, setFlip] = useState(false)
     
     const frontEl = useRef()
     const backEl = useRef()
+    const buttonRef = useRef(null);
+    useEffect(() => {
+        buttonRef.current.focus();
+    },[]);
 
 
     /*Если будет не одно слово, а фраза или предложение
@@ -29,7 +32,7 @@ export default function Flashcard({flashcard}, props) {
         onClick={() => setFlip(!flip)}>
             <div className='front' ref={frontEl}>
                 {flashcard.word}
-                <button onClick={props.tryClick} className='page-btn'>Перевод</button>
+                <button ref={buttonRef} onClick={handleClick} className='page-btn'>Перевод</button>
             </div>
             <div className='back' ref={backEl}>
                 <div className='f-pronunciation'>

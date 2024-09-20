@@ -17,10 +17,6 @@ export default function PopUp({closePopUp, onSubmit, defaultValue}) {
             category: ''
         })
     }
-
-    
-
-
     const [errors, setErrors] = useState("")
     
     const validateForm = () => {
@@ -31,7 +27,7 @@ export default function PopUp({closePopUp, onSubmit, defaultValue}) {
             }
         }
 
-        const hasErrors = !!errorField.length
+        const hasErrors = !!errorField.length;
 
         setErrors(hasErrors ? errorField.join(", ") : "");
         return !hasErrors
@@ -49,10 +45,8 @@ export default function PopUp({closePopUp, onSubmit, defaultValue}) {
         e.preventDefault()
         if (!validateForm()) return;
         onSubmit(formState)
-
         closePopUp();
     }
-
 
     return (
         <div className='p-c'>
@@ -62,19 +56,19 @@ export default function PopUp({closePopUp, onSubmit, defaultValue}) {
                 <form>
                     <div className='form-popup'>
                         <label htmlFor="word">English</label>
-                        <input name="word" value={formState.word} onChange={handleChange}/>
+                        <input name="word" value={formState.word} onChange={handleChange} required />
                     </div>
                     <div className='form-popup'>
                         <label htmlFor="pronunciation">Transcription</label>
-                        <input name="pronunciation" value={formState.pronunciation} onChange={handleChange}/>
+                        <input name="pronunciation" value={formState.pronunciation} onChange={handleChange} required/>
                     </div>
                     <div className='form-popup'>
                         <label htmlFor="k-word">Korean</label>
-                        <input name="k_word" value={formState.k_word} onChange={handleChange}/>
+                        <input name="k_word" value={formState.k_word} onChange={handleChange} required/>
                     </div>
                     <div className='form-popup'>
                         <label htmlFor="category">Category</label>
-                        <input name="category" value={formState.category} onChange={handleChange}/>
+                        <input name="category" value={formState.category} onChange={handleChange} required/>
                     </div>
                     {errors && <div className='error'>{`Пожалуйста, заполните: ${errors}`}</div>}
                     <div className='form-popup-btn'>

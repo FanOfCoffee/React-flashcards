@@ -4,6 +4,7 @@ import pic from '../assets/img/404error.png';
 import '../assets/styles/Buttons.css';
 import '../assets/styles/NotFound.css'
 
+
 function NotFound() {
     return (
         <>

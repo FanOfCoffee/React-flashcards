@@ -11,11 +11,7 @@ import OtherCards from './pages/OtherCards';
 import NotFound from './pages/NotFound';
 import Test from './pages/Test';
 
-
 function App() {
-
-
-
   return (
 
     <>
@@ -28,10 +24,6 @@ function App() {
         <Route path='*' element = {<NotFound/>}/>
         <Route path='/test' element = {<Test/>} />
       </Routes>
-
-        
-        
-
       <div>
         <Footer/>
       </div>

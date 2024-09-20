@@ -4,12 +4,14 @@ import '../assets/styles/Buttons.css'
 import FlashcardList from '../components/FlashcardList';
 import words from '../words.json'
 
+
 function Cards() {
     const [flashcards, setFlashcards] = useState(words)
-    return (
+    return (<>
       <div className='container'>
       <FlashcardList flashcards={flashcards} />
       </div>
+      </>
     )
 }
 

@@ -5,6 +5,7 @@ import '../assets/styles/Buttons.css';
 import words from '../words.json'
 
 
+
 function Home() {
     const [popUpOpen, setPopUpOpen] = useState(false)
     const [rows, setRows] = useState(words);
@@ -35,6 +36,7 @@ function Home() {
     }
     return (
         <>
+
         <div>
         <Table rows={rows} 
             deleteRow = {handleDeleteRow}
