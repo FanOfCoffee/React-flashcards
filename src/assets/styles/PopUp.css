@@ -38,7 +38,7 @@
     flex-direction: column;
     margin-bottom: 0.5rem;
 }
-.form-popup input {
+input {
     border:  1px solid var(--neutral-dark-grayish-blue);
     border-radius: 0.3rem;
     padding: 0.3rem;
@@ -57,6 +57,6 @@
     margin-bottom: 1rem;
 }
 .input-error {
-    border: 1px solid maroon;
+    border: 1px solid darkred;
 }
 
