@@ -1,49 +1,39 @@
-import React, {useState} from 'react'
-import Flashcard from './Flashcard'
-import '../assets/styles/FlashCardSlider.css'
+import React, { useState } from 'react';
+import Flashcard from './Flashcard';
+import '../assets/styles/FlashCardSlider.css';
 
+export default function FlashCardSlider({ flashcards }) {
+    const [current, setCurrent] = useState(0);
 
-export default function FlashCardSlider({flashcards})  {
-    const cards = flashcards.map((flashcard) => {
-        return <Flashcard className='cardslide' flashcard={flashcard} key={flashcard.id} />;
-    });
+    const cards = flashcards.map((flashcard) => (
+        <Flashcard className='cardslide' flashcard={flashcard} key={flashcard.id} />
+    ));
 
     const loading = <div className="loading">Loading flashcard content...</div>;
 
-    const [current, setCurrent] = useState(0);
     function previousCard() {
-        setCurrent(current - 1);
+        setCurrent((prev) => (prev === 0 ? flashcards.length - 1 : prev - 1));
     }
+
     function nextCard() {
-        setCurrent(current + 1);
+        setCurrent((prev) => (prev === flashcards.length - 1 ? 0 : prev + 1));
     }
-    
+
     return (
         <div className='slider'>
             {flashcards && flashcards.length > 0 ? (
-            <div className="cardNumber">
-                Карточка {current + 1} из {flashcards.length}
+                <div className="cardNumber">
+                    Карточка {current + 1} из {flashcards.length}
+                </div>
+            ) : (
+                ""
+            )}
+            <div className="card-container">
+                {flashcards && flashcards.length > 0 ? cards[current] : loading}
             </div>
-            ) : (
-            ""
-            )}
-            {flashcards && flashcards.length > 0 ? cards[current] : loading}
-
             <div className="nav">
-            {current > 0 ? (
                 <button className="page-btn" onClick={previousCard}>Назад</button>
-            ) : (
-                <button className="disabled " disabled>
-                Назад
-                </button>
-            )}
-            {current < flashcards.length - 1 ? (
-                <button сlassName="page-btn" onClick={nextCard}>Вперед</button>
-            ) : (
-                <button className="disabled" disabled>
-                Вперед
-                </button>
-            )}
+                <button className="page-btn" onClick={nextCard}>Вперед</button>
             </div>
         </div>
     );
